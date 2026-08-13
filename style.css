@@ -1,17 +1,20 @@
 h2 {
-    color:rgb(243, 84, 79);
-    font-family:Arial, Helvetica, sans-serif
+    color: rgb(243, 84, 79);
+    font-family: Arial, Helvetica, sans-serif
 }
+
 h1 {
-    color:rgb(252, 252, 252);
-    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(252, 252, 252);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
 }
+
 h3 {
-    color:black;
-    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
+
 p {
     color: rgb(253, 253, 253);
     font-family: Arial, Helvetica, sans-serif;
@@ -33,7 +36,7 @@ section {
 }
 
 nav {
-    background-color: rgb(115, 156, 243);
+    background-color: rgb(0, 43, 134);
     padding: 10px;
 }
 
@@ -49,6 +52,7 @@ nav li {
     margin-right: 15px;
     font-size: 20px;
 }
+
 .banner {
     display: flex;
     align-items: center;
@@ -60,20 +64,37 @@ nav li {
         url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a9f79106-aa54-492d-8379-0d45071e1b92/dkxk3i0-da07e07a-77d6-4da0-8d9f-056dd3c26923.png/v1/fill/w_1280,h_374,q_80,strp/resident_evil_6_banner_by_residentevil2023_dkxk3i0-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mzc0IiwicGF0aCI6Ii9mL2E5Zjc5MTA2LWFhNTQtNDkyZC04Mzc5LTBkNDUwNzFlMWI5Mi9ka3hrM2kwLWRhMDdlMDdhLTc3ZDYtNGRhMC04ZDlmLTA1NmRkM2MyNjkyMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.73GQ-G_hgzwbW-SwxpsJD5z6Ljq6dQtQ8oAh-7w0yZA') no-repeat center center;
     background-size: cover
 }
+
 .banner h1 {
     font-family: Arial, sans-serif;
     font-size: 2.2rem;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(170, 5, 5, 0.7);/
 }
+
 .texto-vermelho {
     color: #b30900;
     text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7);/
 }
+
 body {
-    background-image: url('https://tse2.mm.bing.net/th/id/OIP.LLhihyns4vgoBbnVpuyFdQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'); /* Caminho da sua imagem */
-    background-repeat: no-repeat; /* Impede a imagem de se repetir como mosaico */
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Opcional: deixa o fundo fixo ao rolar a página */
-  }
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.LLhihyns4vgoBbnVpuyFdQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');
+    /* Caminho da sua imagem */
+    background-repeat: no-repeat;
+    /* Impede a imagem de se repetir como mosaico */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a tela */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-attachment: fixed;
+    /* Opcional: deixa o fundo fixo ao rolar a página */
+}
+
+a {
+    text-decoration: none;
+    color: #fa7474;
+    text-shadow: 2px 2px 4px rgba(160, 0, 0, 0.7);
+}
+a:hover {
+        color: rgba(109, 0, 0, 0.678)
+}
