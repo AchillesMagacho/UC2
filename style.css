@@ -1,101 +1,495 @@
-h2 {
-    color: rgb(243, 84, 79);
-    font-family: Arial, Helvetica, sans-serif
+/* =========================================================
+   FONTES
+   ========================================================= */
+
+   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+
+root {
+    --preto: #222;
+    --vermelho: #a22;
+    --branco: #f4f4f4;
+    --azul: #001f5c;
 }
+   /* =========================================================
+      RESET / CONFIGURAÇÕES GERAIS
+      ========================================================= */
+   
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   
+   html {
+       scroll-behavior: smooth;
+   }
+   
+   body {
+       min-height: 100vh;
+   
+       background:
+           linear-gradient(
+               rgba(0, 0, 0, 0.35),
+               rgba(0, 0, 0, 0.65)
+           ),
+           url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/resident-evil-2-box-art.jpg?&fit=crop&w=1200&h=675")
+           center / cover fixed no-repeat;
+   
+       background-color: #090909;
+   
+       color: #fff;
+   
+       font-family: "Oswald", sans-serif;
+       line-height: 1.6;
+   }
+   
+   
+   /* =========================================================
+      TÍTULOS
+      ========================================================= */
+   
+   h1,
+   h2,
+   h3 {
+       font-family: "Bebas Neue", sans-serif;
+       letter-spacing: 1px;
+   }
+   
+   h1 {
+       color: #ffffff;
+       font-size: clamp(2.5rem, 6vw, 5rem);
+       line-height: 1;
+   }
+   
+   h2 {
+       color: #f3544f;
+       font-size: clamp(1.8rem, 4vw, 3rem);
+   }
+   
+   h3 {
+       color: #ffffff;
+       font-size: 1.5rem;
+   }
+   
+   
+   /* =========================================================
+      PARÁGRAFOS
+      ========================================================= */
+   
+   p {
+       color: #ffffff;
+       font-family: "Oswald", sans-serif;
+       font-size: 1.1rem;
+       line-height: 1.7;
+   
+       text-shadow:
+           2px 2px 4px rgba(0, 0, 0, 0.85);
+   }
+   
+   
+   /* =========================================================
+      LISTAS
+      ========================================================= */
+   
+   li {
+       color: rgba(255, 183, 183, 0.9);
+       font-family: "Oswald", sans-serif;
+       font-size: 1.1rem;
+   }
+   
+   
+   /* =========================================================
+      BANNER PRINCIPAL
+      ========================================================= */
+   
+   .banner {
+       position: relative;
+   
+       width: 100%;
+       min-height: 420px;
+   
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   
+       padding: 80px 6%;
+   
+       overflow: hidden;
+   
+       text-align: center;
+   
+       /* Imagem + degradê */
+       background:
+           linear-gradient(
+               135deg,
+               rgba(120, 0, 0, 0.82),
+               rgba(0, 25, 80, 0.88)
+           ),
+           url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a9f79106-aa54-492d-8379-0d45071e1b92/dkxk3i0-da07e07a-77d6-4da0-8d9f-056dd3c26923.png/v1/fill/w_1280,h_374,q_80,strp/resident_evil_6_banner_by_residentevil2023_dkxk3i0-fullview.jpg")
+           center / cover no-repeat;
+   
+       border-bottom: 4px solid #a00000;
+   
+       box-shadow:
+           0 10px 30px rgba(0, 0, 0, 0.65);
+   }
+   
+   
+   /* Camada escura sobre o banner */
+   
+   .banner::after {
+       content: "";
+   
+       position: absolute;
+       inset: 0;
+   
+       background:
+           linear-gradient(
+               to bottom,
+               rgba(0, 0, 0, 0.15),
+               rgba(0, 0, 0, 0.65)
+           );
+   
+       pointer-events: none;
+   }
+   
+   
+   /* Conteúdo do banner */
+   
+   .banner > * {
+       position: relative;
+       z-index: 1;
+   }
+   
+   
+   /* Título dentro do banner */
+   
+   .banner h1 {
+       margin: 0;
+   
+       max-width: 1000px;
+   
+       font-family: "Bebas Neue", sans-serif;
+   
+       font-size: clamp(3rem, 8vw, 6rem);
+   
+       line-height: 0.95;
+   
+       text-transform: uppercase;
+   
+       text-shadow:
+           3px 3px 0 rgba(80, 0, 0, 0.8),
+           0 0 15px rgba(255, 0, 0, 0.35);
+   }
+   
+   
+   /* =========================================================
+      TEXTO VERMELHO
+      ========================================================= */
+   
+   .texto-vermelho {
+       color: #d4140b;
+   
+       text-shadow:
+           2px 2px 4px rgba(0, 0, 0, 0.8),
+           0 0 12px rgba(255, 0, 0, 0.45);
+   }
+   
+   
+   /* =========================================================
+      NAVEGAÇÃO
+      ========================================================= */
+   
+   nav {
+       position: sticky;
+       top: 0;
+   
+       z-index: 1000;
+   
+       width: 100%;
+   
+       background:
+           linear-gradient(
+               90deg,
+               #050505,
+               #001f5c,
+               #050505
+           );
+   
+       border-bottom: 2px solid #8f0000;
+   
+       padding: 6px 10px;
+   
+       box-shadow:
+           0 5px 10px rgba(0, 0, 0, 0.55);
+   
+       backdrop-filter: blur(8px);
+   }
+   
+   nav ul {
+       display: flex;
+   
+       align-items: center;
+       justify-content: center;
+   
+       flex-wrap: wrap;
+   
+       gap: 10px;
+   
+       list-style: none;
+   
+       margin: 0;
+       padding: 0;
+   }
+   
+   nav li {
+       margin: 0;
+   }
+   
+   nav a {
+       display: block;
+   
+       padding: 8px 14px;
+   
+       color: #ffffff;
+   
+       font-family: "Bebas Neue", sans-serif;
+   
+       font-size: 1.2rem;
+   
+       letter-spacing: 1px;
+   
+       text-decoration: none;
+   
+       border-radius: 5px;
+   
+       transition:
+           color 0.25s ease,
+           background-color 0.25s ease,
+           transform 0.25s ease;
+   }
+   
+   nav a:hover {
+       color: #ffffff;
+   
+       background-color: rgba(170, 0, 0, 0.75);
+   
+       transform: translateY(-2px);
+   }
+   
+   
+   /* =========================================================
+      SEÇÕES
+      ========================================================= */
+   
+   section {
+       width: min(1200px, 92%);
+   
+       margin: 30px auto;
+   
+       padding: 30px;
+   
+       background:
+           linear-gradient(
+               135deg,
+               rgba(10, 10, 10, 0.88),
+               rgba(20, 20, 20, 0.78)
+           );
+   
+       border: 1px solid rgba(255, 0, 0, 0.35);
+   
+       border-left: 5px solid #a00000;
+   
+       border-radius: 8px;
+   
+       box-shadow:
+           0 10px 30px rgba(0, 0, 0, 0.55);
+   
+       backdrop-filter: blur(5px);
+   }
+   
 
-h1 {
-    color: rgb(252, 252, 252);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-}
+   img {
+       display: block;
+   
+       max-width: 100%;
+       height: auto;
+   
+       margin: 20px auto;
+   
+       border: 5px solid #971f1f;
+   
+       border-radius: 15px;
+   
+       box-shadow:
+           0 8px 25px rgba(0, 0, 0, 0.65);
+   
+       transition:
+           transform 0.3s ease,
+           box-shadow 0.3s ease;
+   }
+   
+   img:hover {
+       transform: scale(1.02);
+   
+       box-shadow:
+           0 12px 35px rgba(120, 0, 0, 0.65);
+   }
+   
 
-h3 {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
+   
+   a {
+       color: #ff7474;
+   
+       text-decoration: none;
+   
+       text-shadow:
+           2px 2px 4px rgba(80, 0, 0, 0.7);
+   
+       transition:
+           color 0.25s ease,
+           text-shadow 0.25s ease;
+   }
+   
+   a:hover {
+       color: #ffb3b3;
+   
+       text-shadow:
+           0 0 10px rgba(255, 50, 50, 0.65);
+   }
+   
+   
 
-p {
-    color: rgb(253, 253, 253);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40x;
-}
+   
+   .btn {
+       display: inline-block;
+   
+       padding: 12px 25px;
+   
+       margin-top: 15px;
+   
+       color: #ffffff;
+   
+       background:
+           linear-gradient(
+               135deg,
+               #a90000,
+               #5d0000
+           );
+   
+       border: 1px solid #d00000;
+   
+       border-radius: 5px;
+   
+       font-family: "Bebas Neue", sans-serif;
+   
+       font-size: 1.2rem;
+   
+       letter-spacing: 1px;
+   
+       text-transform: uppercase;
+   
+       box-shadow:
+           0 5px 15px rgba(0, 0, 0, 0.45);
+   
+       transition:
+           transform 0.25s ease,
+           box-shadow 0.25s ease,
+           background 0.25s ease;
+   }
+   
+   .btn:hover {
+       color: #ffffff;
+   
+       background:
+           linear-gradient(
+               135deg,
+               #d00000,
+               #7a0000
+           );
+   
+       transform: translateY(-3px);
+   
+       box-shadow:
+           0 8px 20px rgba(120, 0, 0, 0.55);
+   }
+   
 
-img {
-    border-radius: 65.15px;
-    border: 20px solid rgb(151, 32, 32);
-}
+   
+   @media (max-width: 768px) {
+   
+       .banner {
+           min-height: 320px;
+   
+           padding: 60px 20px;
+       }
+   
+       .banner h1 {
+           font-size: clamp(2.5rem, 12vw, 4rem);
+       }
+   
+       nav {
+           padding: 10px;
+       }
+   
+       nav ul {
+           gap: 5px;
+       }
+   
+       nav a {
+           padding: 7px 10px;
+           font-size: 1rem;
+       }
+   
+       section {
+           width: 94%;
+   
+           padding: 20px;
+   
+           margin: 20px auto;
+       }
+   
+       p {
+           font-size: 1rem;
+       }
+   }
+   
 
-section {
-    border: 3px solid rgba(255, 0, 0, 0.342);
-    margin: 15px;
-    padding: 15px;
-    padding-bottom: 15px;
-    margin-top: 15 px;
-    /* realiza comentario em css */
-}
+   
+   @media (max-width: 480px) {
+   
+       .banner {
+           min-height: 280px;
+   
+           padding: 50px 15px;
+       }
+   
+       nav ul {
+           flex-direction: column;
+       }
+   
+       nav li {
+           width: 100%;
+   
+           text-align: center;
+       }
+   
+       nav a {
+           width: 100%;
+       }
+   
+       section {
+           padding: 15px;
+       }
+   }
 
-nav {
-    background-color: rgb(0, 43, 134);
-    padding: 10px;
-}
-
-nav ul {
-    /* remove as bolinhas do menu */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 15px;
-    font-size: 20px;
-}
-
-.banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 100px 80px;
-
-    background: linear-gradient(rgba(255, 0, 0, 0.432), rgba(0, 41, 131, 0.979)),
-        url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a9f79106-aa54-492d-8379-0d45071e1b92/dkxk3i0-da07e07a-77d6-4da0-8d9f-056dd3c26923.png/v1/fill/w_1280,h_374,q_80,strp/resident_evil_6_banner_by_residentevil2023_dkxk3i0-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Mzc0IiwicGF0aCI6Ii9mL2E5Zjc5MTA2LWFhNTQtNDkyZC04Mzc5LTBkNDUwNzFlMWI5Mi9ka3hrM2kwLWRhMDdlMDdhLTc3ZDYtNGRhMC04ZDlmLTA1NmRkM2MyNjkyMy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.73GQ-G_hgzwbW-SwxpsJD5z6Ljq6dQtQ8oAh-7w0yZA') no-repeat center center;
-    background-size: cover
-}
-
-.banner h1 {
-    font-family: Arial, sans-serif;
-    font-size: 2.2rem;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(170, 5, 5, 0.7);/
-}
-
-.texto-vermelho {
-    color: #b30900;
-    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7);/
-}
-
-body {
-    background-image: url('https://tse2.mm.bing.net/th/id/OIP.LLhihyns4vgoBbnVpuyFdQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');
-    /* Caminho da sua imagem */
-    background-repeat: no-repeat;
-    /* Impede a imagem de se repetir como mosaico */
-    background-size: cover;
-    /* Faz a imagem cobrir toda a tela */
-    background-position: center;
-    /* Centraliza a imagem */
-    background-attachment: fixed;
-    /* Opcional: deixa o fundo fixo ao rolar a página */
-}
-
-a {
-    text-decoration: none;
-    color: #fa7474;
-    text-shadow: 2px 2px 4px rgba(160, 0, 0, 0.7);
-
-&:hover {
-    color: rgba(109, 0, 0, 0.678)
-    }
+   video {
+    max-width: 480px;
+    border-radius: 6px;
+   }
+footer {
+    background-color: #7a0000;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
 }
