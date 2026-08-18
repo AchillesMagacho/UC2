@@ -4,15 +4,16 @@
 
    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
 
-root {
-    --preto: #222;
-    --vermelho: #a22;
-    --branco: #f4f4f4;
-    --azul: #001f5c;
-}
+   :root {
+       --preto: #222;
+       --vermelho: #a22;
+       --branco: #f4f4f4;
+       --azul: #001f5c;
+   }
+
    /* =========================================================
-      RESET / CONFIGURAÇÕES GERAIS
-      ========================================================= */
+         RESET / CONFIGURAÇÕES GERAIS
+         ========================================================= */
    
    * {
        margin: 0;
@@ -28,12 +29,9 @@ root {
        min-height: 100vh;
    
        background:
-           linear-gradient(
-               rgba(0, 0, 0, 0.35),
-               rgba(0, 0, 0, 0.65)
-           ),
-           url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/resident-evil-2-box-art.jpg?&fit=crop&w=1200&h=675")
-           center / cover fixed no-repeat;
+           linear-gradient(rgba(0, 0, 0, 0.35),
+               rgba(0, 0, 0, 0.65)),
+           url("https://static0.gamerantimages.com/wordpress/wp-content/uploads/resident-evil-2-box-art.jpg?&fit=crop&w=1200&h=675") center / cover fixed no-repeat;
    
        background-color: #090909;
    
@@ -45,8 +43,8 @@ root {
    
    
    /* =========================================================
-      TÍTULOS
-      ========================================================= */
+         TÍTULOS
+         ========================================================= */
    
    h1,
    h2,
@@ -73,8 +71,8 @@ root {
    
    
    /* =========================================================
-      PARÁGRAFOS
-      ========================================================= */
+         PARÁGRAFOS
+         ========================================================= */
    
    p {
        color: #ffffff;
@@ -88,8 +86,8 @@ root {
    
    
    /* =========================================================
-      LISTAS
-      ========================================================= */
+         LISTAS
+         ========================================================= */
    
    li {
        color: rgba(255, 183, 183, 0.9);
@@ -99,8 +97,51 @@ root {
    
    
    /* =========================================================
-      BANNER PRINCIPAL
-      ========================================================= */
+         TABELAS (COMPACTA E MENOR)
+         ========================================================= */
+   
+   table {
+       width: 100%;
+       max-width: 600px; /* Limita a largura máxima da tabela */
+       margin: 20px auto; /* Centraliza a tabela na página */
+       border-collapse: collapse;
+       font-family: "Oswald", sans-serif;
+       font-size: 0.95rem; /* Fonte levemente menor */
+       background-color: rgba(10, 10, 10, 0.85);
+       border: 1px solid rgba(255, 0, 0, 0.35);
+       box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+   }
+   
+   th, td {
+       padding: 6px 10px; /* Padding reduzido para deixar as linhas mais finas */
+       text-align: center;
+       border-bottom: 1px solid rgba(160, 0, 0, 0.3);
+   }
+   
+   th {
+       background-color: rgba(0, 2, 120, 0.7);
+       color: #ff0000;
+       font-family: "Bebas Neue", sans-serif;
+       font-size: 1.1rem;
+       letter-spacing: 1px;
+       text-transform: uppercase;
+   }
+   
+   tr:nth-child(even) {
+       background-color: rgba(255, 255, 255, 0.03);
+   }
+   
+   tr:hover {
+       background-color: rgba(160, 0, 0, 0.2);
+   }
+   
+   .tabla-edicoes {
+
+   }
+   
+   /* =========================================================
+         BANNER PRINCIPAL
+         ========================================================= */
    
    .banner {
        position: relative;
@@ -120,13 +161,10 @@ root {
    
        /* Imagem + degradê */
        background:
-           linear-gradient(
-               135deg,
+           linear-gradient(135deg,
                rgba(120, 0, 0, 0.82),
-               rgba(0, 25, 80, 0.88)
-           ),
-           url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a9f79106-aa54-492d-8379-0d45071e1b92/dkxk3i0-da07e07a-77d6-4da0-8d9f-056dd3c26923.png/v1/fill/w_1280,h_374,q_80,strp/resident_evil_6_banner_by_residentevil2023_dkxk3i0-fullview.jpg")
-           center / cover no-repeat;
+               rgba(0, 25, 80, 0.88)),
+           url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a9f79106-aa54-492d-8379-0d45071e1b92/dkxk3i0-da07e07a-77d6-4da0-8d9f-056dd3c26923.png/v1/fill/w_1280,h_374,q_80,strp/resident_evil_6_banner_by_residentevil2023_dkxk3i0-fullview.jpg") center / cover no-repeat;
    
        border-bottom: 4px solid #a00000;
    
@@ -144,11 +182,9 @@ root {
        inset: 0;
    
        background:
-           linear-gradient(
-               to bottom,
+           linear-gradient(to bottom,
                rgba(0, 0, 0, 0.15),
-               rgba(0, 0, 0, 0.65)
-           );
+               rgba(0, 0, 0, 0.65));
    
        pointer-events: none;
    }
@@ -156,7 +192,7 @@ root {
    
    /* Conteúdo do banner */
    
-   .banner > * {
+   .banner>* {
        position: relative;
        z-index: 1;
    }
@@ -184,8 +220,8 @@ root {
    
    
    /* =========================================================
-      TEXTO VERMELHO
-      ========================================================= */
+         TEXTO VERMELHO
+         ========================================================= */
    
    .texto-vermelho {
        color: #d4140b;
@@ -197,33 +233,31 @@ root {
    
    
    /* =========================================================
-      NAVEGAÇÃO
-      ========================================================= */
+         NAVEGAÇÃO
+         ========================================================= */
    
    nav {
        position: sticky;
        top: 0;
    
-       z-index: 1000;
+       z-index: 10;
    
-       width: 100%;
+       width: 90%;
    
        background:
-           linear-gradient(
-               90deg,
+           linear-gradient(90deg,
                #050505,
                #001f5c,
-               #050505
-           );
+               #050505);
    
-       border-bottom: 2px solid #8f0000;
+       border-bottom: 2px solid rgba(255, 0, 0, 0.55);
    
-       padding: 6px 10px;
+       padding: 6px 5px;
    
        box-shadow:
-           0 5px 10px rgba(0, 0, 0, 0.55);
+           0 5px 10px rgba(255, 0, 0, 0.55);
    
-       backdrop-filter: blur(8px);
+       backdrop-filter: blur(px);
    }
    
    nav ul {
@@ -278,10 +312,6 @@ root {
    }
    
    
-   /* =========================================================
-      SEÇÕES
-      ========================================================= */
-   
    section {
        width: min(1200px, 92%);
    
@@ -290,11 +320,9 @@ root {
        padding: 30px;
    
        background:
-           linear-gradient(
-               135deg,
+           linear-gradient(135deg,
                rgba(10, 10, 10, 0.88),
-               rgba(20, 20, 20, 0.78)
-           );
+               rgba(20, 20, 20, 0.78));
    
        border: 1px solid rgba(255, 0, 0, 0.35);
    
@@ -308,35 +336,34 @@ root {
        backdrop-filter: blur(5px);
    }
    
-
+   
+   /* =========================================================
+         IMAGENS (UNIFORMES E SEM FUNDO/BORDA)
+         ========================================================= */
+   
    img {
        display: block;
    
-       max-width: 100%;
-       height: auto;
+       width: 300px; /* Tamanho uniforme pré-definido */
+       height: 300px; /* Mantém a proporção uniforme */
+       object-fit: contain; /* Evita que as imagens fiquem distorcidas */
    
        margin: 20px auto;
    
-       border: 5px solid #971f1f;
+       background: transparent; /* Remove qualquer cor de fundo */
+       border: none; /* Remove a borda anterior */
+       border-radius: 0; /* Remove o arredondamento */
+       box-shadow: none; /* Remove o sombreamento */
    
-       border-radius: 15px;
-   
-       box-shadow:
-           0 8px 25px rgba(0, 0, 0, 0.65);
-   
-       transition:
-           transform 0.3s ease,
-           box-shadow 0.3s ease;
+       transition: transform 0.3s ease;
    }
    
    img:hover {
-       transform: scale(1.02);
-   
-       box-shadow:
-           0 12px 35px rgba(120, 0, 0, 0.65);
+       transform: scale(1.05); /* Leve efeito de zoom ao passar o mouse */
+       box-shadow: none;
    }
    
-
+   
    
    a {
        color: #ff7474;
@@ -359,7 +386,7 @@ root {
    }
    
    
-
+   
    
    .btn {
        display: inline-block;
@@ -371,11 +398,9 @@ root {
        color: #ffffff;
    
        background:
-           linear-gradient(
-               135deg,
+           linear-gradient(135deg,
                #a90000,
-               #5d0000
-           );
+               #5d0000);
    
        border: 1px solid #d00000;
    
@@ -402,11 +427,9 @@ root {
        color: #ffffff;
    
        background:
-           linear-gradient(
-               135deg,
+           linear-gradient(135deg,
                #d00000,
-               #7a0000
-           );
+               #7a0000);
    
        transform: translateY(-3px);
    
@@ -414,7 +437,7 @@ root {
            0 8px 20px rgba(120, 0, 0, 0.55);
    }
    
-
+   
    
    @media (max-width: 768px) {
    
@@ -454,7 +477,7 @@ root {
        }
    }
    
-
+   
    
    @media (max-width: 480px) {
    
@@ -481,15 +504,32 @@ root {
        section {
            padding: 15px;
        }
+   
+       img {
+           width: 100%;
+           max-width: 250px;
+           height: auto;
+       }
    }
-
+   
    video {
-    max-width: 480px;
-    border-radius: 6px;
+       max-width: 480px;
+       border-radius: 6px;
    }
-footer {
-    background-color: #7a0000;
-    color: #fff;
-    padding: 15px 20px;
+   
+   footer {
+       background-color: #7a0000;
+       color: #fff;
+       padding: 15px 20px;
+       text-align: center;
+   }
+   footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(156, 0, 0);
+    color: white;
     text-align: center;
-}
+    padding: 15px;
+  }

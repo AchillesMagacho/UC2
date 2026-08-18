@@ -1,50 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RE 2 Remake</title>
+
+    <meta
+        name="description"
+        content="Introdução ao universo de Raccoon City em Resident Evil 2 Remake, com trilha sonora e trailer."
+    >
+
+    <title>Resident Evil 2 Remake | Introdução</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Introdução de Raccoon City</h1>
-        <p>Início</p>
+        <div class="header-content">
+            <h1>Introdução de Raccoon City</h1>
+
+            <p>
+                Conheça a atmosfera de Resident Evil 2 Remake.
+            </p>
+        </div>
     </header>
 
-    <nav>
-        <a href="pagina0.html">Introdução</a> | 
-        <a href="pagina1.html"><strong>História & Arquivos</strong></a> | 
-        <a href="pagina2.html">Divulgação & Links</a> | 
-        <a href="pagina3.html">Comprar o Jogo</a>
+
+    <nav aria-label="Navegação principal">
+        <ul>
+
+            <li>
+                <a href="pagina0.html" aria-current="page">
+                    Introdução
+                </a>
+            </li>
+
+            <li>
+                <a href="pagina1.html">
+                    História &amp; Arquivos
+                </a>
+            </li>
+
+            <li>
+                <a href="pagina2.html">
+                    Divulgação &amp; Links
+                </a>
+            </li>
+
+            <li>
+                <a href="pagina3.html">
+                    Comprar o Jogo
+                </a>
+            </li>
+
+        </ul>
     </nav>
 
-    <hr>
 
-    <section style="text-align: center;">
-        <h2>Trilha Sonora</h2>
-        <audio controls>
-            <source src="Bgm_00.wav" type="audio/wav">
-        </audio>
-        
-        <p><strong>Descrição do Áudio:</strong></p>
-        <p>Este tema cria uma atmosfera sombria e imersiva, essencial para transmitir a tensão constante de explorar os corredores escuros de Raccoon City. <br /> A combinação de notas lentas e sons de fundo marcantes prepara o jogador para o suspense clássico do survival horror.</p>
-    </section>
+    <main>
 
-    <hr>
+        <section class="media">
 
-    <section style="text-align: center; margin: 20px 0;">
-        <h2>Trailer Oficial</h2>
-        <video width="640" height="360" controls style="max-width: 100%; height: auto;">
-            <source src="https://www.bing.com/videos/riverview/relatedvideo?q=anuncio+de+resident+evil+2&mid=17C6E7F65B8CB8B42BDB17C6E7F65B8CB8B42BDB&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUC2oSBKxBEyUC_No8ELUkz4w&FORM=VIRE" type="video/mp4">
-            Seu navegador não suporta a tag de vídeo.
-            
-        </video>
-        
-        <p><strong>Análise do Vídeo:</strong></p>
-        <p>O trailer apresenta o anúncio e o tom gráfico assustador de Resident Evil 2 Remake. Ele destaca a reimaginação dos personagens Leon S. Kennedy e Claire Redfield, <br /> além de demonstrar o visual moderno em alta definição e a jogabilidade com câmera sobre o ombro, atualizando o clássico de 1998 para as novas gerações.</p>
-    </section>
+            <h2>Trilha Sonora</h2>
+
+            <audio controls preload="metadata">
+                <source src="Bgm_00.wav" type="audio/wav">
+
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+
+            <p>
+                <strong>Descrição do áudio:</strong>
+            </p>
+
+            <p>
+                Este tema cria uma atmosfera sombria e imersiva,
+                essencial para transmitir a tensão constante de
+                explorar os corredores escuros de Raccoon City.
+                A combinação de notas lentas e sons de fundo
+                marcantes prepara o jogador para o suspense
+                clássico do survival horror.
+            </p>
+
+        </section>
+
+
+        <section class="media">
+
+            <h2>Trailer Oficial</h2>
+
+            <video
+                controls
+                preload="metadata"
+                poster="img/raccoon-city.jpg"
+            >
+                <source src="trailer.mp4" type="video/mp4">
+
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+
+            <p>
+                <strong>Análise do vídeo:</strong>
+            </p>
+
+            <p>
+                O trailer apresenta o anúncio e o tom gráfico
+                assustador de Resident Evil 2 Remake. Ele destaca
+                a reimaginação dos personagens Leon S. Kennedy e
+                Claire Redfield, além de demonstrar o visual
+                moderno em alta definição e a jogabilidade com
+                câmera sobre o ombro, atualizando o clássico de
+                1998 para as novas gerações.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 — Projeto sobre Resident Evil 2 Remake.
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
