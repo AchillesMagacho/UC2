@@ -348,7 +348,7 @@
        height: 300px; /* Mantém a proporção uniforme */
        object-fit: contain; /* Evita que as imagens fiquem distorcidas */
    
-       margin: 20px auto;
+       margin: 30px auto;
    
        background: transparent; /* Remove qualquer cor de fundo */
        border: none; /* Remove a borda anterior */
@@ -359,7 +359,7 @@
    }
    
    img:hover {
-       transform: scale(1.05); /* Leve efeito de zoom ao passar o mouse */
+       transform: scale(1.15); /* Leve efeito de zoom ao passar o mouse */
        box-shadow: none;
    }
    
@@ -533,3 +533,83 @@
     text-align: center;
     padding: 15px;
   }
+
+  /* Estilo Profissional para Formulário de Contato */
+form {
+    width: 100%;
+    max-width: 600px; /* Largura ideal para leitura */
+    margin: 0 auto; /* Centraliza na página */
+    padding: 2.5rem;
+    color: #7a0000; /* Vermelho temático original */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+/* Estilo para os rótulos: Nome, Telefone, E-mail */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #900; /* Vermelho mais forte para destaque */
+}
+
+/* Estilo para os campos de escrita */
+form input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #cc9999;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff8f8;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao clicar no campo */
+form input:focus {
+    outline: none;
+    border-color: #7a0000;
+    box-shadow: 0 0 0 3px rgba(122, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+/* Texto de ajuda dentro do campo (placeholder) */
+form input::placeholder {
+    color: #aa8888;
+    font-style: italic;
+}
+
+/* Botão de envio */
+form button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #7a0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #990000;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    form {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
